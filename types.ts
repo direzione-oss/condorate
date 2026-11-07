@@ -1,4 +1,3 @@
-
 export interface Expense {
   date: string; // YYYY-MM-DD
   amount: number;
@@ -57,4 +56,42 @@ export enum ProcessingStatus {
   ANALYZING = 'ANALYZING',
   SUCCESS = 'SUCCESS',
   ERROR = 'ERROR'
+}
+
+export interface AuthUser {
+  id: string;
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  role: 'admin' | 'user';
+  status: 'pending' | 'active' | 'suspended';
+  credits: number; // -1 = unlimited
+  expiresAt: string | null;
+  analysesCount: number;
+  createdAt: string;
+  notes?: string;
+  redeemedPromos?: string[];
+}
+
+export interface PaymentConfig {
+  paymentUrl: string;
+  iban: string;
+  bankBeneficiary: string;
+  contactEmail: string;
+  contactPhone: string;
+  plansText: string;
+  welcomeMessage: string;
+  promoEnabled?: boolean;
+  promoCode?: string;
+  promoCredits?: number;
+}
+
+export interface AuditLogEntry {
+  id: string;
+  userId: string;
+  userEmail: string;
+  condoName: string;
+  overallScore: number;
+  createdAt: string;
 }
