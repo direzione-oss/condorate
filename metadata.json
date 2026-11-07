@@ -1,0 +1,6 @@
+{
+  "name": "CondoRate",
+  "description": "Analizzatore di bilanci condominiali basato su AI. Carica un PDF per estrarre automaticamente le spese e visualizzare l'andamento temporale.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
